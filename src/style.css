@@ -217,7 +217,7 @@ button:disabled { opacity: .6; cursor: wait; transform: none; }
   to   { transform: translateX(120vw); }
 }
 
-/* ---------- Faixa amarela em movimento ---------- */
+/* ---------- Faixas em movimento ---------- */
 .faixa {
   position: relative;
   z-index: 3;
@@ -242,6 +242,22 @@ button:disabled { opacity: .6; cursor: wait; transform: none; }
 }
 .faixa span::after { content: ""; width: 12px; height: 12px; background: var(--noite); transform: rotate(45deg); }
 @keyframes correr { to { transform: translateX(-50%); } }
+
+/* ---------- Variações da faixa ---------- */
+.faixa--inversa { transform: rotate(1.6deg); }
+.faixa--inversa .faixa-trilho { animation-direction: reverse; animation-duration: 26s; }
+
+.faixa--brasa { background: var(--brasa); color: #fff; }
+.faixa--brasa span::after { background: #fff; }
+
+.faixa--noite {
+  background: var(--noite);
+  color: var(--ambar);
+  border-block: 3px solid var(--ambar);
+  transform: rotate(-1.6deg);
+}
+.faixa--noite .faixa-trilho { animation-duration: 38s; }
+.faixa--noite span::after { background: var(--ambar); }
 
 /* ---------- Serviços ---------- */
 .servicos-sec { background: var(--noite-2); }
