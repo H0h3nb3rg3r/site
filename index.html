@@ -7,7 +7,8 @@
   <meta name="description" content="Marcenaria de projetos sob medida para casas e escritórios.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;1,700;1,800;1,900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
   <header class="topo">
@@ -24,7 +25,7 @@
       <div class="hero-texto">
         <h1>Móveis sob medida, feitos para durar mais que a moda.</h1>
         <p>Projetamos, cortamos e montamos cada peça na nossa oficina. Você acompanha tudo, do desenho à instalação.</p>
-        <a class="btn" href="#contato">Pedir orçamento</a>  
+        <a class="btn" href="#contato">Pedir orçamento</a>
       </div>
       <div class="tabuas" aria-hidden="true">
         <span style="--w:92%;--c:var(--madeira-1)"></span>
@@ -36,7 +37,18 @@
       </div>
     </section>
 
-    <section id="servicos" class="secao">
+    <div class="faixa" aria-hidden="true">
+      <div class="faixa-trilho">
+        <div class="grupo">
+          <span>Cozinhas</span><span>Armários</span><span>Escritórios</span><span>Restauro</span><span>Sob medida</span>
+        </div>
+        <div class="grupo">
+          <span>Cozinhas</span><span>Armários</span><span>Escritórios</span><span>Restauro</span><span>Sob medida</span>
+        </div>
+      </div>
+    </div>
+
+    <section id="servicos" class="secao corte servicos-sec">
       <h2>O que fazemos</h2>
       <dl class="servicos">
         <div><dt>Cozinhas e armários</dt><dd>Projeto aproveitando cada centímetro, com ferragens que aguentam o uso diário.</dd></div>
@@ -45,13 +57,13 @@
       </dl>
     </section>
 
-    <section id="sobre" class="secao sobre">
+    <section id="sobre" class="secao corte sobre">
       <h2>Sobre a oficina</h2>
       <p>Somos uma marcenaria de equipe pequena. Trabalhamos com poucos projetos por vez para dar atenção a cada um. Todo orçamento é gratuito e vem com prazo por escrito.</p>
       <p class="nota">Texto de exemplo: troque pelo histórico real da sua empresa.</p>
     </section>
 
-    <section id="contato" class="secao contato">
+    <section id="contato" class="secao corte contato">
       <div>
         <h2>Peça seu orçamento</h2>
         <p>Conte o que você precisa. Respondemos em até 2 dias úteis.</p>
@@ -95,7 +107,7 @@
     </section>
   </main>
 
-  <footer class="rodape">
+  <footer class="rodape corte">
     <span>© <span id="ano"></span> Aroeira Marcenaria</span>
   </footer>
 
