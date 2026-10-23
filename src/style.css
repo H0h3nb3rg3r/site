@@ -303,15 +303,14 @@ form .btn { justify-self: start; }
 
 /* ---------- Divisórias de madeira ---------- */
 .divisor {
-  --p: .5;
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
-  padding: 24px 0;
-  min-height: clamp(180px, 24vw, 280px);
+  gap: 6px;
+  padding: 14px 0;
+  min-height: clamp(90px, 11vw, 130px);
   background: linear-gradient(var(--de) 50%, var(--para) 50%);
   overflow: hidden;
 }
@@ -319,32 +318,34 @@ form .btn { justify-self: start; }
 .divisor i {
   display: block;
   flex: none;
-  height: clamp(28px, 3.4vw, 44px);
+  height: clamp(14px, 1.7vw, 22px);
   width: var(--w);
-  margin-left: var(--x);
-  border-radius: 5px;
+  border-radius: 4px;
   background:
     linear-gradient(180deg, rgb(255 255 255 / .26), transparent 38%, rgb(0 0 0 / .2)),
-    repeating-linear-gradient(94deg, rgb(0 0 0 / .08) 0 2px, transparent 2px 23px),
-    repeating-linear-gradient(90deg, rgb(0 0 0 / .05) 0 1px, transparent 1px 13px),
+    repeating-linear-gradient(94deg, rgb(0 0 0 / .08) 0 2px, transparent 2px 19px),
+    repeating-linear-gradient(90deg, rgb(0 0 0 / .05) 0 1px, transparent 1px 11px),
     var(--c);
-  box-shadow: 0 16px 22px -12px rgb(20 32 27 / .55), inset 0 -2px 0 rgb(0 0 0 / .18);
-  transform: translateX(calc((var(--p) - .5) * var(--dir) * var(--v) * 60vw));
+  box-shadow: 0 8px 12px -8px rgb(20 32 27 / .55), inset 0 -2px 0 rgb(0 0 0 / .18);
+
+  /* A animação: nome, duração, ritmo constante, repetição infinita */
+  animation: passar var(--t) linear infinite;
+  animation-delay: var(--d);
+  animation-direction: var(--s);
   will-change: transform;
 }
 
-/* Nós na madeira */
-.divisor i:nth-child(2)::after,
-.divisor i:nth-child(4)::after {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 14px;
-  margin: calc(clamp(28px, 3.4vw, 44px) / 2 - 7px) 0 0 62%;
-  border-radius: 50%;
-  background: radial-gradient(ellipse, rgb(0 0 0 / .3) 0 25%, rgb(0 0 0 / .12) 26% 55%, transparent 58%);
+/* Sai da esquerda da tela e atravessa até a direita */
+@keyframes passar {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100vw); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .divisor i { animation: none; transform: translateX(12vw); }
 }
 
 @media (max-width: 700px) {
-  .divisor { gap: 8px; padding: 18px 0; }
+  .divisor { gap: 5px; padding: 10px 0; }
+  .divisor i { width: calc(var(--w) * 1.6); }
 }
