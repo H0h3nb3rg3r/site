@@ -54,7 +54,6 @@ form.addEventListener("submit", async (e) => {
   botao.disabled = true;
   mostrarStatus("Enviando...");
 
-  
   try {
     await salvarContato(dados);
     form.reset();
