@@ -402,8 +402,6 @@ form .btn { justify-self: start; }
   color: var(--aco);
   font-size: .95rem;
 }
-
-
 /* ---------- Responsivo ---------- */
 @media (max-width: 900px) {
   .contato { grid-template-columns: 1fr; }
